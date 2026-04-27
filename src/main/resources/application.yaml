@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: gestionusuarios
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/gestionusuarios
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+
+server:
+  port: 9090
+  servlet:
+    context-path: /api/v1/users
+
+security:
+  jwt:
+    secret-key: P9JfhuM7sVClZuQvAGaaXTa05UriyoeUOF4lGNuqkmo=
+    token-expiration: 600000 # 10 minutos en milisegundos
